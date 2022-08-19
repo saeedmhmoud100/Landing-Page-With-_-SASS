@@ -1,0 +1,7 @@
+.c {
+  font-size: large; }
+  @media (max-width: 40px) {
+    .c {
+      width: 52px; } }
+
+/*# sourceMappingURL=index.css.map */
