@@ -1,7 +1,32 @@
-.c {
-  font-size: large; }
-  @media (max-width: 40px) {
-    .c {
-      width: 52px; } }
+:root {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  --bg-color-1:#ffe600;
+  --bg-color-2:#1c1c1c;
+  --bg-color-3:#f5f5f5;
+  --text-head-color:#8f8f8f;
+  --text-color:#d4d4d4;
+}
 
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  letter-spacing: 13px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
 /*# sourceMappingURL=index.css.map */

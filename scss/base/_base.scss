@@ -1,0 +1,30 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bg-color-1:#{$bgColor-1};
+    --bg-color-2:#{$bgColor-2};
+    --bg-color-3:#{$bgColor-3};
+    --text-head-color:#{$TextHeadColor};
+    --text-color:#{$TextColor};
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    letter-spacing: 13px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,7 +1,17 @@
-.c{
-  font-size: large;
-  @media (max-width: 40px) {
-    width: 52px;
+@import "./config/variables";
+@import "./config/mixins";
+@import "./config/funcations";
 
-  }
-}
+@import "./base/base";
+
+@import "./layout/container";
+
+@import "./components/header";
+
+@import "./layout/navbar";
+
+@import "./pages/HomePage";
+
+@import "./components/buttons";
+
+@import "./layout/footer";
