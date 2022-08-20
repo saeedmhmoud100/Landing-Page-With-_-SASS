@@ -7,10 +7,12 @@
     --bg-color-3:#{$bgColor-3};
     --text-head-color:#{$TextHeadColor};
     --text-color:#{$TextColor};
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Work Sans', sans-serif;
+    height: 3000px;
 }
 
 h1, h2, h3 {
