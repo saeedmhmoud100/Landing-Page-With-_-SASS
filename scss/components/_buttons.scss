@@ -1,0 +1,19 @@
+/*============ BUTTONS ==================*/
+
+.button-1{
+  outline: none;
+  border: 1px solid var(--bg-color-1);
+  background-color: var(--bg-color-1);
+  letter-spacing: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 34px;
+  padding: 13px 25px;
+  cursor: pointer;
+
+  @include prefixes(transition,background-color .5s);
+  &:hover{
+    background-color: transparent;
+    color: white;
+  }
+}

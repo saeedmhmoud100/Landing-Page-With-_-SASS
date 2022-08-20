@@ -14,10 +14,11 @@ body {
   height: 3000px; }
 
 h1, h2, h3 {
-  letter-spacing: 13px; }
+  letter-spacing: 14px; }
 
 p {
-  line-height: 1.5; }
+  line-height: 1.5;
+  letter-spacing: 5px; }
 
 a {
   text-decoration: none; }
@@ -28,7 +29,9 @@ ul {
 .container {
   width: 1170px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
   @media (max-width: 577px) {
     .container {
       width: 90%; } }
@@ -44,7 +47,7 @@ ul {
 
 header.header {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-image: url("../../images/header.jpg");
   padding-top: 1.5rem;
   background-size: cover;
@@ -120,5 +123,91 @@ header.header {
   header.header .nav.toggle_nav {
     box-shadow: 0px 2px 6px 0px grey;
     background-color: var(--bg-color-2); }
+  header.header .head {
+    width: 100%;
+    height: 300px;
+    color: white;
+    margin-top: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.5; }
+    header.header .head h2 {
+      font-weight: 100;
+      margin-bottom: -10px; }
+  header.header .bottom-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 65px;
+    bottom: 16px;
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: -1; }
+    header.header .bottom-arrow > img {
+      width: 32px; }
+    header.header .bottom-arrow .arrows {
+      text-align: center;
+      color: white;
+      position: relative; }
+      header.header .bottom-arrow .arrows .arrow span {
+        height: 20px;
+        width: 2px;
+        background-color: white;
+        position: absolute; }
+      header.header .bottom-arrow .arrows .arrow:first-of-type > span {
+        top: 7px;
+        height: 11px; }
+      header.header .bottom-arrow .arrows .arrow:first-of-type span:first-of-type {
+        -moz-transform: rotateZ(-45deg);
+        -o-transform: rotateZ(-45deg);
+        -ms-transform: rotateZ(-45deg);
+        -webkit-transform: rotateZ(-45deg);
+        right: 19px; }
+      header.header .bottom-arrow .arrows .arrow:first-of-type span:last-of-type {
+        -moz-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        -webkit-transform: rotateZ(45deg);
+        right: 11px; }
+      header.header .bottom-arrow .arrows .arrow:last-of-type {
+        position: relative;
+        top: 5px; }
+        header.header .bottom-arrow .arrows .arrow:last-of-type span:first-of-type {
+          -moz-transform: rotateZ(-45deg);
+          -o-transform: rotateZ(-45deg);
+          -ms-transform: rotateZ(-45deg);
+          -webkit-transform: rotateZ(-45deg);
+          right: 22px; }
+        header.header .bottom-arrow .arrows .arrow:last-of-type span:last-of-type {
+          -moz-transform: rotateZ(45deg);
+          -o-transform: rotateZ(45deg);
+          -ms-transform: rotateZ(45deg);
+          -webkit-transform: rotateZ(45deg);
+          right: 8px; }
+
+/*============ BUTTONS ==================*/
+.button-1 {
+  outline: none;
+  border: 1px solid var(--bg-color-1);
+  background-color: var(--bg-color-1);
+  letter-spacing: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 34px;
+  padding: 13px 25px;
+  cursor: pointer;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s; }
+  .button-1:hover {
+    background-color: transparent;
+    color: white; }
 
 /*# sourceMappingURL=index.css.map */
