@@ -140,10 +140,10 @@ header.header {
       margin-bottom: -10px; }
   header.header .bottom-arrow {
     position: absolute;
-    bottom: 0;
     left: 50%;
     height: 65px;
     bottom: 16px;
+    cursor: pointer;
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -177,7 +177,8 @@ header.header {
         right: 11px; }
       header.header .bottom-arrow .arrows .arrow:last-of-type {
         position: relative;
-        top: 5px; }
+        top: 5px;
+        animation: Down-Up-Arrow 1s linear infinite alternate-reverse; }
         header.header .bottom-arrow .arrows .arrow:last-of-type span:first-of-type {
           -moz-transform: rotateZ(-45deg);
           -o-transform: rotateZ(-45deg);
@@ -191,6 +192,9 @@ header.header {
           -webkit-transform: rotateZ(45deg);
           right: 8px; }
 
+@keyframes Down-Up-Arrow {
+  to {
+    top: 17px; } }
 /*============ BUTTONS ==================*/
 .button-1 {
   outline: none;

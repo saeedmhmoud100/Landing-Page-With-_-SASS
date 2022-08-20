@@ -103,10 +103,10 @@ header.header {
 
     .bottom-arrow{
         position: absolute;
-        bottom: 0;
         left: 50%;
         height: 65px;
         bottom: 16px;
+        cursor: pointer;
         @include prefixes(transform,translateX(-50%));
         z-index: -1;
         > img{
@@ -144,6 +144,7 @@ header.header {
             .arrow:last-of-type{
                 position: relative;
                 top: 5px;
+                animation: Down-Up-Arrow 1s linear infinite alternate-reverse ;
                 span:first-of-type{
                     @include prefixes(transform, rotateZ(-45deg));
                     right:22px;
@@ -154,5 +155,11 @@ header.header {
                 }
             }
         }
+    }
+}
+
+@keyframes Down-Up-Arrow {
+    to{
+        top: 17px;
     }
 }
