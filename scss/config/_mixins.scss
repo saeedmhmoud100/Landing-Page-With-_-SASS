@@ -1,78 +1,80 @@
-@mixin overlay{
-  position: relative;
-  z-index: 1;
-  .overlay{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(2, 2, 2, 0.54);
-    z-index: -1;
-  }
-}
+@mixin overlay {
+    position: relative;
+    z-index: 1;
 
-@mixin prefixes($prop,$val){
-  -moz-#{$prop}: $val;
-  -o-#{$prop}: $val;
-  -ms-#{$prop}: $val;
-  -webkit-#{$prop}: $val;
-}
-
-
-.con-prop{
-  width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  text-align: center;
-  @media (max-width: $MaxSmallScreen) {
-  width: 90%;
-  padding-left: 5%;
-  padding-right:5%;
-}
-
-  @media (min-width: $MinSmallScreen) {
-    width: $MinSmallScreen - 30px;
-  }
-
-  @media (min-width: $MinMediumScreen) {
-    width: $MinMediumScreen - 30px;
-  }
-
-  @media (min-width: $MinLargeScreen) {
-    width: $MinLargeScreen - 30px;
-  }
-}
-
-
-@for $i from 1 through $grid_division{
-  .col-#{$i}{
-    width: ($i*100% / $grid_division) ;
-    grid-columns: span $i;
-    @media (max-width: $MinMediumScreen) {
-      width: 100%
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(2, 2, 2, 0.54);
+        z-index: -1;
     }
-  }
+}
+
+@mixin prefixes($prop, $val) {
+    -moz-#{$prop}: $val;
+    -o-#{$prop}: $val;
+    -ms-#{$prop}: $val;
+    -webkit-#{$prop}: $val;
+}
+
+.con-prop {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+
+    @media (max-width: $MaxSmallScreen) {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @media (min-width: $MinSmallScreen) {
+        width: $MinSmallScreen - 30px;
+    }
+
+    @media (min-width: $MinMediumScreen) {
+        width: $MinMediumScreen - 30px;
+    }
+
+    @media (min-width: $MinLargeScreen) {
+        width: $MinLargeScreen - 30px;
+    }
+}
+
+@for $i from 1 through $grid_division {
+    .col-#{$i} {
+        width: $i * 100% / $grid_division;
+        grid-columns: span $i;
+
+        @media (max-width: $MinMediumScreen) {
+            width: 100%;
+        }
+    }
 }
 
 @mixin container {
-  @extend .con-prop;
-
-  &-flex{
     @extend .con-prop;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 
-  }
+    &-flex {
+        @extend .con-prop;
 
-  &-grid{
-    @extend .con-prop;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-grid {
+        @extend .con-prop;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 }
 

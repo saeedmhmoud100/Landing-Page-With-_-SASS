@@ -15,10 +15,9 @@ body {
     height: 3000px;
 }
 
-h1,h2, h3 {
+h1, h2, h3 {
     letter-spacing: 14px;
 }
-
 
 p {
     line-height: 2.2;
@@ -31,4 +30,19 @@ a {
 
 ul {
     list-style: none;
+}
+
+.text-head {
+    @extend .container-flex;
+
+    margin-top: 100px;
+    flex-direction: column;
+
+    img {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-weight: 300;
+    }
 }
