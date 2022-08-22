@@ -1,6 +1,21 @@
+.container {
+    @include container;
 
+    &-grid {
+        @extend .con-prop;
 
+        display: grid;
 
-.container{
-  @include container();
+        @media (max-width: $MaxSmallScreen) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: $MinSmallScreen) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: $MinMediumScreen) {
+            grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+        }
+    }
 }
