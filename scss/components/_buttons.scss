@@ -17,3 +17,12 @@
     color: white;
   }
 }
+
+.button-2{
+  @extend .button-1;
+  border: var(--bg-color-1);
+  background-color: transparent;
+  &:hover{
+    background-color: var(--bg-color-1);
+  }
+}
