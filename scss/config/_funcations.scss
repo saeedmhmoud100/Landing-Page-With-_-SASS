@@ -1,0 +1,8 @@
+ //=============== Portfolio =================
+
+ @function over_portfolio_width($logo_width,$flex_gap:0){
+   @return calc((100% - #{$logo_width+$flex_gap}) / 2)
+ }
+
+
+ //=============== Portfolio =================
