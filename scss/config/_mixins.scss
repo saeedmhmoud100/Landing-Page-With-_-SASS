@@ -14,6 +14,7 @@
 }
 
 @mixin prefixes($prop, $val) {
+    #{$prop}: $val;
     -moz-#{$prop}: $val;
     -o-#{$prop}: $val;
     -ms-#{$prop}: $val;
