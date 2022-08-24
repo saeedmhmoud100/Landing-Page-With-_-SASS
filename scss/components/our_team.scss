@@ -1,0 +1,103 @@
+.our_team{
+  margin-bottom: 50px;
+  .text-head{
+    @media (max-width: $MaxSmallScreen) {
+      margin-top: 48px;
+    }
+    @media (max-width:391px) {
+      margin-top: -40px;
+    }
+  }
+
+  .cards{
+    gap: 30px;
+    .card{
+      position: relative;
+      box-shadow: 0 0 10px 0 gainsboro;
+      img{
+        width: 100%;
+        height: 350px;
+        filter: grayscale(100%);
+
+      }
+      &::after{
+        content: attr(data-name);
+        background-color: rgba(255, 230, 0, 0.66);
+        width: 100%;
+        /* height: 50px; */
+        position: absolute;
+        top: 56%;
+        left: 0;
+        padding: 18px 0;
+      }
+    }
+  }
+}
+
+
+#under_team{
+  display: flex;
+  margin-top: 22%;
+  @media (max-width:$MinMediumScreen ) {
+    margin-top: 30%;
+  }
+  @media (max-width:400px ) {
+    margin-top: 70%;
+  }
+  @media (max-width:316px ) {
+    margin-top: 114%;
+  }
+  .under_team{
+
+    position: relative;
+    height: 180px;
+    width: 100%;
+    background-color: var(--bg-color-1);
+    .container-flex{
+      gap: 30px;
+      flex-wrap: nowrap;
+      position: absolute;
+      top: -135%;
+
+      @media (max-width:$MinMediumScreen ) {
+        flex-direction: column;
+        position: initial;
+      }
+      .item{
+        width: 50%;
+        display: flex;
+        height: 650px;
+        justify-content: space-around;
+        @media (max-width:$MinMediumScreen ) {
+          flex-direction: column;
+          width: 100%;
+        }
+        &:first-of-type{
+          flex-direction: column;
+          >p{
+            background-color: var(--bg-color-2);
+            padding: 60px;
+            text-align: left;
+            //margin-bottom: 78px;
+          }
+          h5{
+            text-align: left;
+          }
+        }
+        &:last-of-type{
+          flex-direction: column-reverse;
+          >img{
+            height: 322px;
+            width: 100%;
+          }
+          h5{
+            text-align: right;
+          }
+          @media (max-width: $MinMediumScreen) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
