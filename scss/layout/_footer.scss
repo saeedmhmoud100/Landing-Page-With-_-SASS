@@ -1,0 +1,128 @@
+#footer{
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--bg-color-2);
+
+  @media (min-width: 317px) and (max-width:357px ) {
+    margin-top:40px ;
+  }
+  .container-flex{
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+    height: 320px;
+    gap: 20px;
+    @media (max-width: $MinMediumScreen) {
+      flex-wrap: wrap;
+      height: auto;
+      align-items: flex-start;
+    }
+    @media (max-width: $MaxSmallScreen) {
+      justify-content: space-evenly;
+      text-align: center;
+    }
+
+    @media (max-width: 309px) {
+      align-items: flex-start;
+      text-align: left;
+    }
+    @media (max-width: $MaxSmallScreen) {
+      h5{
+        font-size: 1.5em;
+      }
+    }
+    >*{
+      display: flex;
+      flex-direction: column;
+      color: white;
+      height: 100%;
+      p{
+        color: white;
+      }
+
+      @media (max-width: $MinMediumScreen) {
+        width: auto;
+      }
+      @media (max-width: 309px) {
+        width: 100%;
+      }
+    }
+
+    .text{
+      justify-content: space-between;
+      width: 35%;
+      @media (max-width: $MinMediumScreen) {
+        width: auto;
+      }
+
+      img{
+        width: 50px;
+        margin-left: 12px;
+      }
+      h5 span{
+        color: var(--bg-color-1);
+      }
+    }
+
+    .links,.about_us{
+
+      >div{
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $MaxSmallScreen) {
+          align-items: center;
+        }
+        @media (max-width: 309px) {
+        align-items: flex-start;
+        }
+        //justify-content: space-evenly;
+        a{
+          color: white;
+          cursor: pointer;
+          margin: 13.5px 0;
+          display: inline-block;
+          width: fit-content;
+          &::after{
+            content: '';
+            width: 0px;
+            height: 1px;
+            display: block;
+            background: white;
+            transition: 300ms;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .contact_us{
+      width: 35%;
+      justify-content: space-between;
+      @media (max-width: $MinMediumScreen) {
+        width: 45%;
+        height: 338px;
+      }
+      @media (max-width: $MaxSmallScreen) {
+        width: 100%;
+        height: 285px;
+      }
+      button{
+        border-radius: 40px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        padding: 16px;
+        margin-top: 0;
+      }
+
+      > div{
+        i{
+          font-size: 30px;
+          margin: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

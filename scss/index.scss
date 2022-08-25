@@ -8,12 +8,9 @@
 
 @import "./components/buttons";
 
-@import "./components/header";
+@import "components/header";
 @import "./components/services";
 @import "./components/portfolio";
-@import "./components/our_team";
-
-
-@import "./pages/HomePage";
+@import "components/our_team";
 
 @import "./layout/footer";

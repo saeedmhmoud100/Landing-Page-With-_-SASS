@@ -586,4 +586,103 @@ div.under_services {
       .under_team::before {
         content: none; } }
 
+#footer {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--bg-color-2); }
+  @media (min-width: 317px) and (max-width: 357px) {
+    #footer {
+      margin-top: 40px; } }
+  #footer .container-flex, #footer .text-head {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+    height: 320px;
+    gap: 20px; }
+    @media (max-width: 992px) {
+      #footer .container-flex, #footer .text-head {
+        flex-wrap: wrap;
+        height: auto;
+        align-items: flex-start; } }
+    @media (max-width: 577px) {
+      #footer .container-flex, #footer .text-head {
+        justify-content: space-evenly;
+        text-align: center; } }
+    @media (max-width: 309px) {
+      #footer .container-flex, #footer .text-head {
+        align-items: flex-start;
+        text-align: left; } }
+    @media (max-width: 577px) {
+      #footer .container-flex h5, #footer .text-head h5 {
+        font-size: 1.5em; } }
+    #footer .container-flex > *, #footer .text-head > * {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      height: 100%; }
+      #footer .container-flex > * p, #footer .text-head > * p {
+        color: white; }
+      @media (max-width: 992px) {
+        #footer .container-flex > *, #footer .text-head > * {
+          width: auto; } }
+      @media (max-width: 309px) {
+        #footer .container-flex > *, #footer .text-head > * {
+          width: 100%; } }
+    #footer .container-flex .text, #footer .text-head .text {
+      justify-content: space-between;
+      width: 35%; }
+      @media (max-width: 992px) {
+        #footer .container-flex .text, #footer .text-head .text {
+          width: auto; } }
+      #footer .container-flex .text img, #footer .text-head .text img {
+        width: 50px;
+        margin-left: 12px; }
+      #footer .container-flex .text h5 span, #footer .text-head .text h5 span {
+        color: var(--bg-color-1); }
+    #footer .container-flex .links > div, #footer .text-head .links > div, #footer .container-flex .about_us > div, #footer .text-head .about_us > div {
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 577px) {
+        #footer .container-flex .links > div, #footer .text-head .links > div, #footer .container-flex .about_us > div, #footer .text-head .about_us > div {
+          align-items: center; } }
+      @media (max-width: 309px) {
+        #footer .container-flex .links > div, #footer .text-head .links > div, #footer .container-flex .about_us > div, #footer .text-head .about_us > div {
+          align-items: flex-start; } }
+      #footer .container-flex .links > div a, #footer .text-head .links > div a, #footer .container-flex .about_us > div a, #footer .text-head .about_us > div a {
+        color: white;
+        cursor: pointer;
+        margin: 13.5px 0;
+        display: inline-block;
+        width: fit-content; }
+        #footer .container-flex .links > div a::after, #footer .text-head .links > div a::after, #footer .container-flex .about_us > div a::after, #footer .text-head .about_us > div a::after {
+          content: '';
+          width: 0px;
+          height: 1px;
+          display: block;
+          background: white;
+          transition: 300ms; }
+        #footer .container-flex .links > div a:hover::after, #footer .text-head .links > div a:hover::after, #footer .container-flex .about_us > div a:hover::after, #footer .text-head .about_us > div a:hover::after {
+          width: 100%; }
+    #footer .container-flex .contact_us, #footer .text-head .contact_us {
+      width: 35%;
+      justify-content: space-between; }
+      @media (max-width: 992px) {
+        #footer .container-flex .contact_us, #footer .text-head .contact_us {
+          width: 45%;
+          height: 338px; } }
+      @media (max-width: 577px) {
+        #footer .container-flex .contact_us, #footer .text-head .contact_us {
+          width: 100%;
+          height: 285px; } }
+      #footer .container-flex .contact_us button, #footer .text-head .contact_us button {
+        border-radius: 40px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        padding: 16px;
+        margin-top: 0; }
+      #footer .container-flex .contact_us > div i, #footer .text-head .contact_us > div i {
+        font-size: 30px;
+        margin: 4px;
+        cursor: pointer; }
+
 /*# sourceMappingURL=index.css.map */
