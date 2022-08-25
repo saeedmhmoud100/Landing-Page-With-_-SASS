@@ -528,7 +528,8 @@ div.under_services {
   height: 650px;
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   @media (max-width: 992px) {
     .under_team {
       height: 1200px; } }
@@ -570,5 +571,19 @@ div.under_services {
         @media (max-width: 992px) {
           .under_team .container-flex .item:last-of-type, .under_team .text-head .item:last-of-type {
             flex-direction: column; } }
+  .under_team::before {
+    content: '';
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background-color: var(--bg-color-1);
+    top: 52%;
+    transform: translateY(-50%); }
+    @media (max-width: 1200px) {
+      .under_team::before {
+        top: 57%; } }
+    @media (max-width: 992px) {
+      .under_team::before {
+        content: none; } }
 
 /*# sourceMappingURL=index.css.map */

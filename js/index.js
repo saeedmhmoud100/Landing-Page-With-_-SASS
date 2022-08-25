@@ -60,4 +60,5 @@ const resize_height = (parent_id,child_id) =>{
 window.onresize = () => resize_height('under_team','item')
 resize_height('under_team','item')
 
+
 // =============== OUR TEAM =================
