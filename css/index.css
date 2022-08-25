@@ -61,6 +61,7 @@ ul {
   .text-head h2 {
     font-weight: 300; }
 
+/*============ CONTAINER ==================*/
 .container-flex, .text-head {
   display: flex;
   justify-content: center;
@@ -176,6 +177,7 @@ ul {
   .button-2:hover {
     background-color: var(--bg-color-1); }
 
+/*============ HEADER ==================*/
 header.header {
   width: 100%;
   height: 600px;
@@ -341,6 +343,7 @@ header.header {
     font-size: 76px;
     color: var(--bg-color-1); }
 
+/*============ SERVICES ==================*/
 section.services {
   background-color: var(--bg-color-3);
   padding-top: 1px;
@@ -401,6 +404,7 @@ div.under_services {
         margin-top: -8px;
         transform: scaleY(0.8); }
 
+/*============ PORTFOLIO ==================*/
 #portfolio {
   text-align: center; }
   #portfolio .over_portfolio {
@@ -497,6 +501,7 @@ div.under_services {
         font-size: 8px;
         width: max-content; } }
 
+/*============ OUR TEAM ==================*/
 .our_team {
   margin-bottom: 50px; }
   @media (max-width: 577px) {
@@ -586,6 +591,7 @@ div.under_services {
       .under_team::before {
         content: none; } }
 
+/*============ FOOTER ==================*/
 #footer {
   width: 100%;
   padding: 100px 0;
