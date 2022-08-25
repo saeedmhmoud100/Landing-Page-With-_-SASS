@@ -524,58 +524,51 @@ div.under_services {
         left: 0;
         padding: 18px 0; }
 
-#under_team {
+.under_team {
+  height: 650px;
+  width: 100%;
   display: flex;
-  margin-top: 22%; }
+  justify-content: center; }
   @media (max-width: 992px) {
-    #under_team {
-      margin-top: 30%; } }
-  @media (max-width: 400px) {
-    #under_team {
-      margin-top: 70%; } }
-  @media (max-width: 316px) {
-    #under_team {
-      margin-top: 114%; } }
-  #under_team .under_team {
-    position: relative;
-    height: 180px;
-    width: 100%;
-    background-color: var(--bg-color-1); }
-    #under_team .under_team .container-flex, #under_team .under_team .text-head {
-      gap: 30px;
-      flex-wrap: nowrap;
-      position: absolute;
-      top: -135%; }
+    .under_team {
+      height: 1200px; } }
+  .under_team .container-flex, .under_team .text-head {
+    gap: 30px;
+    flex-wrap: nowrap;
+    position: absolute;
+    justify-content: center; }
+    @media (max-width: 992px) {
+      .under_team .container-flex, .under_team .text-head {
+        flex-direction: column;
+        position: initial; } }
+    .under_team .container-flex .item, .under_team .text-head .item {
+      width: 50%;
+      display: flex;
+      height: 650px;
+      justify-content: space-around; }
       @media (max-width: 992px) {
-        #under_team .under_team .container-flex, #under_team .under_team .text-head {
+        .under_team .container-flex .item, .under_team .text-head .item {
           flex-direction: column;
-          position: initial; } }
-      #under_team .under_team .container-flex .item, #under_team .under_team .text-head .item {
-        width: 50%;
-        display: flex;
-        height: 650px;
-        justify-content: space-around; }
+          width: 100%;
+          height: auto; } }
+      .under_team .container-flex .item:first-of-type, .under_team .text-head .item:first-of-type {
+        flex-direction: column;
+        padding-bottom: 34px; }
+        .under_team .container-flex .item:first-of-type > p, .under_team .text-head .item:first-of-type > p {
+          background-color: var(--bg-color-2);
+          padding: 60px;
+          text-align: left; }
+        .under_team .container-flex .item:first-of-type h5, .under_team .text-head .item:first-of-type h5 {
+          text-align: left; }
+      .under_team .container-flex .item:last-of-type, .under_team .text-head .item:last-of-type {
+        flex-direction: column-reverse; }
+        .under_team .container-flex .item:last-of-type > img, .under_team .text-head .item:last-of-type > img {
+          height: 322px;
+          width: 100%; }
+        .under_team .container-flex .item:last-of-type h5, .under_team .text-head .item:last-of-type h5 {
+          text-align: right; }
         @media (max-width: 992px) {
-          #under_team .under_team .container-flex .item, #under_team .under_team .text-head .item {
-            flex-direction: column;
-            width: 100%; } }
-        #under_team .under_team .container-flex .item:first-of-type, #under_team .under_team .text-head .item:first-of-type {
-          flex-direction: column; }
-          #under_team .under_team .container-flex .item:first-of-type > p, #under_team .under_team .text-head .item:first-of-type > p {
-            background-color: var(--bg-color-2);
-            padding: 60px;
-            text-align: left; }
-          #under_team .under_team .container-flex .item:first-of-type h5, #under_team .under_team .text-head .item:first-of-type h5 {
-            text-align: left; }
-        #under_team .under_team .container-flex .item:last-of-type, #under_team .under_team .text-head .item:last-of-type {
-          flex-direction: column-reverse; }
-          #under_team .under_team .container-flex .item:last-of-type > img, #under_team .under_team .text-head .item:last-of-type > img {
-            height: 322px;
-            width: 100%; }
-          #under_team .under_team .container-flex .item:last-of-type h5, #under_team .under_team .text-head .item:last-of-type h5 {
-            text-align: right; }
-          @media (max-width: 992px) {
-            #under_team .under_team .container-flex .item:last-of-type, #under_team .under_team .text-head .item:last-of-type {
-              flex-direction: column; } }
+          .under_team .container-flex .item:last-of-type, .under_team .text-head .item:last-of-type {
+            flex-direction: column; } }
 
 /*# sourceMappingURL=index.css.map */

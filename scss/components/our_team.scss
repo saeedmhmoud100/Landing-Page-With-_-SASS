@@ -34,68 +34,74 @@
   }
 }
 
+//
+//#under_team{
+//  display: flex;
+//  //margin-top: 22%;
+//  @media (max-width:$MinMediumScreen ) {
+//    margin-top: 30%;
+//  }
+//  @media (max-width:400px ) {
+//    margin-top: 70%;
+//  }
+//  @media (max-width:316px ) {
+//    margin-top: 114%;
+//  }
+//}
+.under_team{
 
-#under_team{
+  height: 650px;
+  width: 100%;
   display: flex;
-  margin-top: 22%;
-  @media (max-width:$MinMediumScreen ) {
-    margin-top: 30%;
+  justify-content: center;
+  
+  @media (max-width: $MinMediumScreen) {
+    height: 1200px;
   }
-  @media (max-width:400px ) {
-    margin-top: 70%;
-  }
-  @media (max-width:316px ) {
-    margin-top: 114%;
-  }
-  .under_team{
-
-    position: relative;
-    height: 180px;
-    width: 100%;
-    background-color: var(--bg-color-1);
-    .container-flex{
-      gap: 30px;
-      flex-wrap: nowrap;
-      position: absolute;
-      top: -135%;
-
+  .container-flex{
+    gap: 30px;
+    flex-wrap: nowrap;
+    position: absolute;
+    //top: -135%;
+    justify-content: center;
+    @media (max-width:$MinMediumScreen ) {
+      flex-direction: column;
+      position: initial;
+    }
+    .item{
+      width: 50%;
+      display: flex;
+      height: 650px;
+      justify-content: space-around;
       @media (max-width:$MinMediumScreen ) {
         flex-direction: column;
-        position: initial;
+        width: 100%;
+        height: auto;
       }
-      .item{
-        width: 50%;
-        display: flex;
-        height: 650px;
-        justify-content: space-around;
-        @media (max-width:$MinMediumScreen ) {
-          flex-direction: column;
+      &:first-of-type{
+        flex-direction: column;
+        padding-bottom: 34px;
+        >p{
+          background-color: var(--bg-color-2);
+          padding: 60px;
+          text-align: left;
+          //margin-bottom: 78px;
+        }
+        h5{
+          text-align: left;
+        }
+      }
+      &:last-of-type{
+        flex-direction: column-reverse;
+        >img{
+          height: 322px;
           width: 100%;
         }
-        &:first-of-type{
-          flex-direction: column;
-          >p{
-            background-color: var(--bg-color-2);
-            padding: 60px;
-            text-align: left;
-            //margin-bottom: 78px;
-          }
-          h5{
-            text-align: left;
-          }
+        h5{
+          text-align: right;
         }
-        &:last-of-type{
-          flex-direction: column-reverse;
-          >img{
-            height: 322px;
-            width: 100%;
-          }
-          h5{
-            text-align: right;
-          }
-          @media (max-width: $MinMediumScreen) {
-            flex-direction: column;
-          }
+        @media (max-width: $MinMediumScreen) {
+          flex-direction: column;
         }
       }
     }

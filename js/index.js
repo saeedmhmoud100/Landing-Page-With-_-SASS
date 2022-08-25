@@ -38,3 +38,26 @@ window.onclick = (n) => {
         n.target.id == 'nav__icon' ? nav.classList.toggle('show') : null
     }
 }
+
+
+
+// =============== OUR TEAM =================
+
+
+const resize_height = (parent_id,child_id) =>{
+
+    const under_team= document.getElementById(parent_id)
+    const under_team_item_width= document.getElementById(child_id).offsetHeight
+
+    if (window.screen.width < 583){
+        under_team.style.height = `${under_team_item_width *1.8}px`
+    }
+    if(window.screen.width < 362){
+        under_team.style.height = `${under_team_item_width *1.5}px`
+    }
+}
+
+window.onresize = () => resize_height('under_team','item')
+resize_height('under_team','item')
+
+// =============== OUR TEAM =================
