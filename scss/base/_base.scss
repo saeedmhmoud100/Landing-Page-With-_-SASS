@@ -8,6 +8,56 @@
     --text-head-color:#{$TextHeadColor};
     --text-color:#{$TextColor};
     scroll-behavior: smooth;
+
+    body.dark {
+        $bgColor-2: #222;
+        $bgColor-3: #f4f4f4;
+        $TextHeadColor: rgb(255, 255, 255);
+        $TextColor: #fff;
+
+        --bg-color-1:#{$bgColor-1};
+        --bg-color-2:#{$bgColor-2};
+        --bg-color-3:#{$bgColor-3};
+        --text-head-color:#{$TextHeadColor};
+        --text-color:#{$TextColor};
+        background-color: #222;
+
+        nav .container {
+            background-color: transparent !important;
+        }
+
+        header.header .nav__list {
+            background-color: #222;
+        }
+
+        section {
+            background-color: #222;
+        }
+
+        .container, .container-flex, .container-grid {
+            background-color: #222 !important;
+        }
+
+        .text-head {
+            background-color: #222;
+        }
+
+        .card {
+            background-color: #222 !important;
+        }
+
+        h3 {
+            color: black !important;
+        }
+
+        .pogresses {
+            background-color: #222 !important;
+        }
+
+        .under_team .container-flex .item:first-of-type > p, .under_team .text-head .item:first-of-type > p {
+            background-color: #111;
+        }
+    }
 }
 
 body {
