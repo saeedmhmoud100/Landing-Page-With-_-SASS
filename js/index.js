@@ -1,24 +1,24 @@
 /* =================== nav style =================== */
 
 const NavStyle = () => {
-    const nav = document.getElementById('nav')
-    document.documentElement.scrollTop > 546 ?
-    nav.classList.add('toggle_nav') : nav.classList.remove('toggle_nav')
-}
-window.onscroll = () => NavStyle()
+  const nav = document.getElementById("nav");
+  document.documentElement.scrollTop > 546
+    ? nav.classList.add("toggle_nav")
+    : nav.classList.remove("toggle_nav");
+};
+window.onscroll = () => NavStyle();
 
 /* =================== show nav =================== */
 
-const ShowNav = (icon_click_id,nav_id) => {
-    const icon = document.getElementById(icon_click_id)
-    const nav = document.getElementById(nav_id)
+const ShowNav = (icon_click_id, nav_id) => {
+  const icon = document.getElementById(icon_click_id);
+  const nav = document.getElementById(nav_id);
 
-    icon.onclick =() => {
-        nav.classList.toggle('show')
-    }
-
-}
-ShowNav('nav__icon','nav__list')
+  icon.onclick = () => {
+    nav.classList.toggle("show");
+  };
+};
+ShowNav("nav__icon", "nav__list");
 
 /* =================== Hide nav =================== */
 
@@ -31,34 +31,50 @@ ShowNav('nav__icon','nav__list')
 //     HideNav('nav__link','show')
 // })
 
-window.onclick = (n) => {
-    const nav = document.getElementById('nav__list')
-    if (nav.classList.contains('show')){
-        n.target.id !== 'nav__list' ? nav.classList.remove('show') : null
-        n.target.id == 'nav__icon' ? nav.classList.toggle('show') : null
-    }
-}
-
-
+window.onclick = n => {
+  const nav = document.getElementById("nav__list");
+  if (nav.classList.contains("show")) {
+    n.target.id !== "nav__list" ? nav.classList.remove("show") : null;
+    n.target.id == "nav__icon" ? nav.classList.toggle("show") : null;
+  }
+};
 
 // =============== OUR TEAM =================
 
+const resize_height = (parent_id, child_id) => {
+  const under_team = document.getElementById(parent_id);
+  const under_team_item_width = document.getElementById(child_id).offsetHeight;
 
-const resize_height = (parent_id,child_id) =>{
+  if (window.screen.width < 583) {
+    under_team.style.height = `${under_team_item_width * 1.8}px`;
+  }
+  if (window.screen.width < 362) {
+    under_team.style.height = `${under_team_item_width * 1.5}px`;
+  }
+};
 
-    const under_team= document.getElementById(parent_id)
-    const under_team_item_width= document.getElementById(child_id).offsetHeight
-
-    if (window.screen.width < 583){
-        under_team.style.height = `${under_team_item_width *1.8}px`
-    }
-    if(window.screen.width < 362){
-        under_team.style.height = `${under_team_item_width *1.5}px`
-    }
-}
-
-window.onresize = () => resize_height('under_team','item')
-resize_height('under_team','item')
-
+window.onresize = () => resize_height("under_team", "item");
+resize_height("under_team", "item");
 
 // =============== OUR TEAM =================
+
+/* =================== Change The Theme =================== */
+
+window.localStorage["theme"] == "dark"
+  ? document.body.classList.add("dark")
+  : (localStorage["theme"] = "white");
+
+let toggle_icon =
+  document.querySelector(".fa-toggle-off") ||
+  document.querySelector(".fa-toggle-on");
+
+toggle_icon.addEventListener("click", e => changeTheme(e));
+
+function changeTheme(e) {
+  e.target.classList.toggle("fa-toggle-off");
+  e.target.classList.toggle("fa-toggle-on");
+  document.body.classList.toggle("dark");
+  localStorage["theme"] == "white"
+    ? (localStorage["theme"] = "dark")
+    : (localStorage["theme"] = "white");
+}

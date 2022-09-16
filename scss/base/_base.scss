@@ -1,3 +1,7 @@
+* {
+    transition: color .3s,background-color .3s;
+}
+
 :root {
     margin: 0;
     padding: 0;
@@ -44,6 +48,10 @@
 
         .card {
             background-color: #222 !important;
+        }
+
+        div.under_services .container-grid .card {
+            background-color: #333 !important;
         }
 
         h3 {

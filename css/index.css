@@ -33,6 +33,11 @@
   }
 }
 
+* {
+  -webkit-transition: color .3s,background-color .3s;
+  transition: color .3s,background-color .3s;
+}
+
 :root {
   margin: 0;
   padding: 0;
@@ -77,6 +82,10 @@
 
 :root body.dark .card {
   background-color: #222 !important;
+}
+
+:root body.dark div.under_services .container-grid .card {
+  background-color: #333 !important;
 }
 
 :root body.dark h3 {
@@ -386,6 +395,25 @@ header.header .nav__top {
 
 header.header .nav__img {
   height: 3.5rem;
+  cursor: pointer;
+}
+
+header.header .nav__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.header .nav__icons i[class*="toggle"] {
+  color: white;
+  font-size: 21px;
   cursor: pointer;
 }
 
